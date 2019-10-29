@@ -36,7 +36,7 @@ var server = http.createServer(function(request, response){
     response.setHeader('Content-Type', 'text/javascript;charset=utf-8')
     response.write(fs.readFileSync('public/main.js'))
     response.end()
-  } else if(path === '/style.css'){
+  } else if(path === '/style.css' || path === '/2.css'){
     response.statusCode = 200
     response.setHeader('Content-Type', 'text/css;charset=utf-8')
     response.write(fs.readFileSync('public/style.css'))
